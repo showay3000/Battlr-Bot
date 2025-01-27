@@ -1,0 +1,16 @@
+{
+    "build": {
+      "env": {
+        "VITE_API_URL": "https://bots-si0g.onrender.com/bots"
+      }
+    },
+    "routes": [
+      {
+        "src": "/(.*)",
+        "dest": "/dist/$1",
+        "headers": {
+          "Cache-Control": "s-maxage=3600, stale-while-revalidate"
+        }
+      }
+    ]
+  }
